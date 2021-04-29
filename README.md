@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 聚合查词 dict-aggr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 代码
+  - [Github Repo 链接](https://github.com/zinc0x1E/dict-aggr)
+- 访问地址
+  - 部署于 Github Pages
+  - [链接](https://zinc0x1e.github.io/dict-aggr/)
+  - 由于在前端项目中直接爬了人人词典的数据，所以【需要在浏览器端开启 CORS 才可以使用】，否则会提示 "LOOK UP FAILED"
+    - Chrome 浏览器可以使用 CORS 插件开启 CORS
+  - Github Pages 页面【仅供演示，请勿滥用】，Collins API 只接受每天 1000 次以内的查询
 
-## Available Scripts
+## 聚合的 API / 网站及被利用的数据
 
-In the project directory, you can run:
+- Collins Dictionary
+  - 词语定义
+  - 几乎所有数据
+- 人人词典（未提供API，爬取的数据）
+  - 考纲信息，所查单词是否是四级 / 六级考纲词汇
 
-### `npm start`
+## 开发过程
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+由于所有数据都来自于其他网站 / 服务，所以本项目被设计为一个纯前端的项目，所有的数据都在浏览器内收集和处理。项目借助 Github Pages 部署，所以也完全无需提供简单的服务端。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+数据获取方式有 API 调用和爬虫两部分。API 调用方面使用了 axios。爬虫侧使用了 jsdom 和 jquery 的轻量化替代方案 cheerio。由于人人词典的页面似乎是原生开发的，所以 class name 和 dom 结构清晰可读，数据简单易爬，简单分析所需数据位置就可以爬出来。
 
-### `npm test`
+UI 上为了简化开发直接使用了 Antd 组件库的 Modal 组件完成弹窗功能。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+项目借助 `gh-pages` 插件直接傻瓜式部署上仓库的 github pages 页面。
 
-### `npm run build`
+## 运行
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. 克隆本仓库
+2. 新建 `src/secret.json` 文件
+3. 在该文件中配置你的 Collins API Key
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "COLINS_DICTIONARY_API_KEY": "4c546e37-c9e5-4840-945c-b4f14e3a57b6"
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. `npm install` & `npm run start`
 
-### `npm run eject`
+## Credit
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Collins
+- 人人词典
+- Github
+- React
+- Cheerio
+- Axios
+- Antd
