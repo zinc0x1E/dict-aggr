@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dict-aggr/static/css/main.9cb7bcd2.chunk.css",
+    "main.js": "/dict-aggr/static/js/main.ed3f981c.chunk.js",
+    "main.js.map": "/dict-aggr/static/js/main.ed3f981c.chunk.js.map",
+    "runtime-main.js": "/dict-aggr/static/js/runtime-main.2339f8c6.js",
+    "runtime-main.js.map": "/dict-aggr/static/js/runtime-main.2339f8c6.js.map",
+    "static/css/2.a3bbbea6.chunk.css": "/dict-aggr/static/css/2.a3bbbea6.chunk.css",
+    "static/js/2.d7abdcf5.chunk.js": "/dict-aggr/static/js/2.d7abdcf5.chunk.js",
+    "static/js/2.d7abdcf5.chunk.js.map": "/dict-aggr/static/js/2.d7abdcf5.chunk.js.map",
+    "static/js/3.b109aa46.chunk.js": "/dict-aggr/static/js/3.b109aa46.chunk.js",
+    "static/js/3.b109aa46.chunk.js.map": "/dict-aggr/static/js/3.b109aa46.chunk.js.map",
+    "index.html": "/dict-aggr/index.html",
+    "static/css/2.a3bbbea6.chunk.css.map": "/dict-aggr/static/css/2.a3bbbea6.chunk.css.map",
+    "static/css/main.9cb7bcd2.chunk.css.map": "/dict-aggr/static/css/main.9cb7bcd2.chunk.css.map",
+    "static/js/2.d7abdcf5.chunk.js.LICENSE.txt": "/dict-aggr/static/js/2.d7abdcf5.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/dict-aggr/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2339f8c6.js",
+    "static/css/2.a3bbbea6.chunk.css",
+    "static/js/2.d7abdcf5.chunk.js",
+    "static/css/main.9cb7bcd2.chunk.css",
+    "static/js/main.ed3f981c.chunk.js"
+  ]
+}
